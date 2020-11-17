@@ -47,7 +47,7 @@ char	*ft_itoa(int n)
 	{
 		p--;
 		s[p] = ((k % 10) + 48);
-		k = k / 10;
+		k /= 10;
 	}
 	return (s);
 }
