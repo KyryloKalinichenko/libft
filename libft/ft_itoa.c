@@ -1,10 +1,10 @@
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
-int	ft_len(int n)
+int	ft_len(long n)
 {
-	int k;
-	int p;
+	long k;
+	long p;
 
 	k = 1;
 	p = 0;
@@ -15,13 +15,10 @@ int	ft_len(int n)
 		n *= -1;
 		k++;
 	}
-	else
+	while (n > 9)
 	{
-		while (n > 9)
-		{
-			n /= 10;
-			k++;
-		}
+		n /= 10;
+		k++;
 	}
 	return (k + p);
 
@@ -31,37 +28,35 @@ char	*ft_itoa(int n)
 {
 	char *s;
 	int p;
-	int k;
+	long k;
 
-	p = ft_len(n);
-	printf("%i\n", p);
-	k = -1;
+	k = n;
+	p = ft_len(k);
 	s = malloc(sizeof(char) * (p + 1));
 	if (s == NULL)
 		return (NULL);
-	while(s[++k] != '\0')
-	{
-		if (n < 0)
-			s[k] = '-';
-		else
-		{
-			s[k] = ((n % 10) + 48);
-			n -= n % 10;
-			printf("%c\n", s[k]);
-		}
-	}
 	s[p] = '\0';
+	if (k == 0)
+		s[0] = '0';
+	if (k < 0)
+	{
+			s[0] = '-';
+			k *= -1;
+	}
+	while(k > 0)
+	{
+		p--;
+		s[p] = ((k % 10) + 48);
+		k = k / 10;
+	}
 	return (s);
 }
-
+/*
 int	main(void)
 {
-	int i = 10;
+	int i = -10;
 
-	while(i++ < 20)
-	{
-		printf("%s\n", ft_itoa(i));
-		//printf("%i\n", i);
-	}
+	while (i++ < 20)
+		printf("%s\n", ft_itoa(-2147483647 -1));
 	return 0;
-}
+}*/

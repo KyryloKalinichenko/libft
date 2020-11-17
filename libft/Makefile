@@ -75,9 +75,10 @@ name:
 clean:
 	rm -f $(OBJ)
 
-fclean: clean
-	rm -f $(NAME)
+fclean: 
+	rm -f $(name)
+	rm -f $(so)
 
-re: fclean all
+re: fclean clean
 
 .PHONY: clean fclean all re

@@ -1,5 +1,5 @@
 #include "libft.h"
-//#include <stdio.h>
+#include <stdio.h>
 
 int	ft_count(char const *s, char c)
 {
@@ -16,7 +16,7 @@ int	ft_count(char const *s, char c)
 	if (s[0] != c)
 		k -= 1;
 //	printf("%i\n", k);
-	return (k + 1);
+	return (k);
 }
 
 char	**ft_split(char const *s, char c)
@@ -41,8 +41,9 @@ char	**ft_split(char const *s, char c)
 			j++;
 			i++;
 		}
+//		printf("%i is i\n %i is j\n ", i, j);
 		splited[k] = ft_substr(s, i - j, j);
-//		printf("%s\n", splited[k]);
+	//	printf("%s\n", splited[k]);
 		if (splited[k] == NULL)
 			return NULL;
 		j = 0;
@@ -56,7 +57,7 @@ char	**ft_split(char const *s, char c)
 int	main(void)
 {
 	int i = -1;
-	char *string = "      split       this for   me  !       ";
+	char *string = "    split this  for   me     !        ";
         char **result = ft_split(string, ' ');
 
 	while (result[++i] != NULL)
