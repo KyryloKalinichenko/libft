@@ -1,15 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-
-int	ft_strlen(char *s)
-{
-	int i;
-	
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -18,24 +7,10 @@ char	*ft_strdup(const char *s)
 
 	i = -1;
 	dup = malloc(sizeof(char) * (ft_strlen((char*)s) + 1));
+	if (dup == NULL)
+		return NULL;
 	while (s[++i])
 		dup[i] = s[i];
+	dup[i] = '\0';
 	return (dup);
-}
-
-int	main(int argc, char **argv)
-{
-	if (argc == 1)
-	{
-		printf("add arg!");
-		return 0;
-	}
-	char *a;
-	a = ft_strdup(argv[1]);
-
-	printf("%s\n", argv[1]);
-	printf("%s\n", a);
-	free (a);
-	
-	return 0;
 }

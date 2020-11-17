@@ -1,48 +1,51 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char a;
-	char *d;
-	const char *s;
+/*	unsigned char *d;
+	unsigned char *s;
+	size_t i;
 
-	d = dest;
-	s = src;
+	if(dest == NULL && src == NULL)
+		return (NULL);
 
-	while (n)
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	if(src < dest)
 	{
-		a = *s;
-		*d = a;
-		s++;
-		d++;
-		n--;
+		i = n;
+		while (i > 0)
+		{
+			d[n - i] = s[n - i];
+			i--;
+		}
 	}
-	return (dest);
+	else
+	{
+		i = 0;
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dest);*/
+
+	size_t				i;
+	unsigned char		*ptr;
+	const unsigned char	*ptr2;
+
+	if(dst == NULL && src == NULL)
+                return (NULL);
+
+	ptr = (unsigned char*)dst;
+	ptr2 = (unsigned char*)src;
+	i = 0;
+	if (ptr2 < ptr)
+		while (++i <= len)
+			ptr[len - i] = ptr2[len - i];
+	else
+		while (len-- > 0)
+			*(ptr++) = *(ptr2++);
+	return (dst);
 }
-
-int main(void)
-{
-/*	char s[13] = "hello world";
-	char k[13];
-
-	printf("%s\n", ft_memmove(k, s, 5*sizeof(char)));
-	printf("%s\n", memmove(k, s, 5*sizeof(char)));
-			return 0;
-}*/
-
- char str[100] = "Learningisfun";
-    char *first, *second;
-    first = str;
-    second = str;
-    printf("Original string :%s\n ", str);
-
-    // when overlap happens then it just ignore it
-    ft_memmove(first + 8, first, 10);
-    printf("memcpy overlap : %s\n ", str);
-
-    // when overlap it start from first position
-    memmove(second + 8, first, 10);
-    printf("memmove overlap : %s\n ", str);
-    return 0;
-    }

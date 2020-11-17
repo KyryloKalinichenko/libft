@@ -1,34 +1,17 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char *d;
-	const char *s;
-	int i;
+	unsigned int i;
 
-	d = dest;
-	s = src;
 	i = 0;
-	while(n)
+	while(n > i)
 	{
-		*d = *s;
-		if (*s == c)
-			return (d + 1);
-		n--;
-		s++;
-		d++;
+		*(unsigned char*)(dest + i) = *(unsigned char*)(src + i);
+		if (*(unsigned char*)(src + i) == (unsigned char)c)
+			return (dest + (1 + i));
+		i++;
+		
 	}
 	return (NULL);
-}
-
-int	main(void)
-{
-	char s[13] = "hello world";
-	char d[13];
-
-	printf("%s\n", ft_memccpy(d, s, 'w', 6*sizeof(char)));
-	printf("%s\n", memccpy(d, s, 'w', 6*sizeof(char)));
-	return 0;
 }

@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -13,12 +12,4 @@ void	*ft_memset(void *s, int c, size_t n)
 		n_str++;
 	}
 	return s;
-}
-
-int main(void)
-{
-	char s[13] = "Hello world";
-	
-	printf("%s\n", ft_memset(s + 2, '.', 3*sizeof(char)));
-	return 0;
 }
