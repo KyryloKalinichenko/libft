@@ -1,42 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 17:08:13 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/19 17:01:24 by kkalinic         ###   ########.fr       */
+/*   Created: 2020/11/19 11:36:01 by kkalinic          #+#    #+#             */
+/*   Updated: 2020/11/19 12:01:52 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstdelone(t_list *alst, void (*del)(void*))
 {
+	t_list *tmp;
 
-	int i;
-	long k;
-
-	i = 0;
-	k = n;
-	if (k < 0)
-	{
-		ft_putchar_fd('-', fd);
-		k *= -1;
-	}
-	if (k > 9)
-	{
-		i = k % 10;
-		ft_putnbr_fd(((k - i) / 10), fd);
-		ft_putchar_fd(i + 48, fd);
-	}
-	if (k > -1 && k < 10)
-		ft_putchar_fd(k + 48, fd);
-
+	tmp = alst->next;
+	del(alst->content);
 }
-/*
-int main()
-{
-	ft_putnbr_fd(0, 1);
-}*/

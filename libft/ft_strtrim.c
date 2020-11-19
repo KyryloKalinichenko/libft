@@ -1,6 +1,21 @@
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+int	ft_set(char c, char const *s)
+{
+	int i;
+
+	i = 0;
+	while(s[i])
+	{
+		if (s[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);	
+
+}
+
+char	*ft_strtrim(char const *s, char const *set)
 {
 	/*size_t	i;
 	size_t	start;
@@ -34,11 +49,11 @@ char	*ft_strtrim(char const *s)
 		return (NULL);
 	i = 0;
 	b = (ft_strlen(s + 1));
-	while (s[i] && ft_iswhitespace(s[i]))
+	while (s[i] && ft_set(s[i], set))
 			i++;
 	if (i == ft_strlen(s))
 		return (ft_calloc(1, 1));
-	while(s[b] && ft_iswhitespace(s[b]))
+	while(s[b] && ft_set(s[b], set))
 		b--;
 	if(!(a = ft_substr(s, i, (b - i + 1))))
 		return (NULL);

@@ -1,42 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 17:08:13 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/19 17:01:24 by kkalinic         ###   ########.fr       */
+/*   Created: 2020/11/19 10:17:59 by kkalinic          #+#    #+#             */
+/*   Updated: 2020/11/19 11:22:34 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-
-	int i;
-	long k;
-
-	i = 0;
-	k = n;
-	if (k < 0)
+	if (lst && new)
 	{
-		ft_putchar_fd('-', fd);
-		k *= -1;
+		new->next = *lst;
+		*lst = new;
 	}
-	if (k > 9)
-	{
-		i = k % 10;
-		ft_putnbr_fd(((k - i) / 10), fd);
-		ft_putchar_fd(i + 48, fd);
-	}
-	if (k > -1 && k < 10)
-		ft_putchar_fd(k + 48, fd);
-
 }
-/*
-int main()
-{
-	ft_putnbr_fd(0, 1);
-}*/

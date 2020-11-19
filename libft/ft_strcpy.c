@@ -1,23 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/19 18:00:40 by kkalinic          #+#    #+#             */
+/*   Updated: 2020/11/19 18:00:45 by kkalinic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	const char *b;
-	int i;
+	int count;
 
-	b = (char*)src;
-       	i = 0;	
-	if (ft_strlen(dest) < ft_strlen(b))
-		return (dest);
-	else
+	count = 0;
+	while (src[count] != '\0')
 	{
-		while (b[i])
-		{
-			dest[i] = b[i];
-			i++;
-		}
-		dest[i] = '\0';
-		return (dest);
+		dst[count] = (char)src[count];
+		count++;
 	}
+	dst[count] = '\0';
+	return (dst);
+
 }
 

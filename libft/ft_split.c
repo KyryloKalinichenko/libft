@@ -29,8 +29,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
-	splited = malloc(sizeof(char*) * ft_count(s, c));
-	if (splited == NULL)
+	if (!(splited = malloc(sizeof(char) * ft_count(s, c))))
 		return NULL;
 	while (s[i] != '\0')
 	{
@@ -50,20 +49,24 @@ char	**ft_split(char const *s, char c)
 		k++;
 	}
 //	printf("%i\n", k);
-	splited[k] = NULL;
+	splited[k - 1] = NULL;
 	return (splited);
 }
-/*
+
 int	main(void)
 {
 	int i = -1;
-	char *string = "    split this  for   me     !        ";
-        char **result = ft_split(string, ' ');
+
+	char *string = "  split it  fot me    !                  ";
+    char **result = ft_split(string, ' ');
 
 	while (result[++i] != NULL)
 	{
 		printf("%s\n", result[i]);
+
 	}
+	
+	//printf("%s\n", result[i] = NULL);
 	free (result);
 	return 0;
-}*/
+}
