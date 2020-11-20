@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:03:17 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/20 12:34:23 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 16:13:44 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int			ft_isstrwhitespace(char c);
 int			ft_isotherwhitespace(char c);
 int			ft_iswhitespace(char c);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
-
 void		*ft_memalloc(size_t size);
 void		ft_memdel(void **ap);
 char		*ft_strnew(size_t size);
@@ -76,7 +75,7 @@ void		*ft_calloc(size_t nmemb, size_t size);
 char		**ft_split(char const *s, char c);
 int			ft_len(long n);
 
-typedef struct		t_list
+typedef struct		s_list
 {
 	void			*content;
 	struct t_list	*next;

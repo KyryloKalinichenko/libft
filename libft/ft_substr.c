@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:19:29 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/20 13:06:52 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 15:59:58 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s)
 	{
-		str = (char*)malloc(sizeof(char) * (len + 1));
+		str = malloc(sizeof(char) * (len + 1));
 		if (!str)
 			return (NULL);
 		i = 0;
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			}
 			i++;
 		}
-		str[j] = 0;
+		str[j] = '\0';
 		return (str);
 	}
 	return (NULL);
