@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:10:34 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/19 11:35:47 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:22:37 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list *last;
-	
+
 	if (lst && new)
 	{
 		if (!(*lst))
@@ -25,5 +25,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			last = ft_lstlast(*lst);
 			last->next = new;
 		}
-	}	
+	}
 }

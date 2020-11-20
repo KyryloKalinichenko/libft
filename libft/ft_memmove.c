@@ -1,43 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/20 12:05:13 by kkalinic          #+#    #+#             */
+/*   Updated: 2020/11/20 12:06:44 by kkalinic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-/*	unsigned char *d;
-	unsigned char *s;
-	size_t i;
-
-	if(dest == NULL && src == NULL)
-		return (NULL);
-
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if(src < dest)
-	{
-		i = n;
-		while (i > 0)
-		{
-			d[n - i] = s[n - i];
-			i--;
-		}
-	}
-	else
-	{
-		i = 0;
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
-	return (dest);*/
-
 	size_t				i;
 	unsigned char		*ptr;
 	const unsigned char	*ptr2;
 
-	if(dst == NULL && src == NULL)
-                return (NULL);
-
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	ptr = (unsigned char*)dst;
 	ptr2 = (unsigned char*)src;
 	i = 0;

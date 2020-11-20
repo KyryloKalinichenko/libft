@@ -6,9 +6,10 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:06:45 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/17 16:13:15 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:07:10 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putendl_fd(const char *s, int fd)
@@ -17,4 +18,3 @@ void	ft_putendl_fd(const char *s, int fd)
 		ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
-

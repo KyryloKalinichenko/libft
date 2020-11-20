@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:08:13 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/19 17:01:24 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:02:44 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-
-	int i;
-	long k;
+	int		i;
+	long	k;
 
 	i = 0;
 	k = n;
@@ -33,10 +32,4 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (k > -1 && k < 10)
 		ft_putchar_fd(k + 48, fd);
-
 }
-/*
-int main()
-{
-	ft_putnbr_fd(0, 1);
-}*/

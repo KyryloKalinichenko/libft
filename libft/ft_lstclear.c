@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:52:55 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/19 12:21:28 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:23:20 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	if (lst && (*lst))
 	{
-		while(*lst)
+		while (*lst)
 		{
 			tmp = (*lst)->next;
 			ft_lstdelone(*lst, del);
 			free(*lst);
 			(*lst) = tmp;
 		}
-	}	
+	}
 }

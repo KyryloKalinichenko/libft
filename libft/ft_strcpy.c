@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 18:00:40 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/19 18:00:45 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 11:51:11 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,4 @@ char	*ft_strcpy(char *dst, const char *src)
 	}
 	dst[count] = '\0';
 	return (dst);
-
 }
-

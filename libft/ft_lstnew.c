@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:57:30 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/18 12:20:51 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:17:37 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 t_list	*ft_lstnew(void *cont)
 {
-	t_list *temp;
-	void *ver;
+	t_list	*temp;
+	void	*ver;
 
 	ver = cont;
-	if(!(temp = malloc(sizeof(t_list))))
-		return NULL;
+	if (!(temp = malloc(sizeof(t_list))))
+		return (NULL);
 	temp->content = cont;
 	temp->next = NULL;
 	return (temp);
 }
-

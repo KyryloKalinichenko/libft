@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/20 12:09:13 by kkalinic          #+#    #+#             */
+/*   Updated: 2020/11/20 12:09:26 by kkalinic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -5,11 +17,11 @@ void	*ft_memset(void *s, int c, size_t n)
 	unsigned char *n_str;
 
 	n_str = s;
-	while(n)
+	while (n)
 	{
 		*n_str = c;
 		n--;
 		n_str++;
 	}
-	return s;
+	return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 13:33:49 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/19 15:41:38 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:21:27 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	tmp = lst;
 	if (lst)
 	{
-		while(tmp != NULL)
+		while (tmp != NULL)
 		{
 			f(tmp->content);
 			tmp = tmp->next;

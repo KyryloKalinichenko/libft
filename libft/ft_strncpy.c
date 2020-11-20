@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/20 11:23:44 by kkalinic          #+#    #+#             */
+/*   Updated: 2020/11/20 11:25:59 by kkalinic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+char		*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	int i;
-	const char *b;
+	int				i;
+	const char		*b;
 
 	b = (char*)src;
 	i = 0;
@@ -21,4 +33,3 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 	}
 	return (dest);
 }
-

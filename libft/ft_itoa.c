@@ -6,14 +6,13 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 10:56:12 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/18 10:56:40 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:20:48 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
-int	ft_len(long n)
+int		ft_len(long n)
 {
 	long k;
 	long p;
@@ -33,14 +32,13 @@ int	ft_len(long n)
 		k++;
 	}
 	return (k + p);
-
 }
 
 char	*ft_itoa(int n)
 {
-	char *s;
-	int p;
-	long k;
+	char	*s;
+	int		p;
+	long	k;
 
 	k = n;
 	p = ft_len(k);
@@ -52,10 +50,10 @@ char	*ft_itoa(int n)
 		s[0] = '0';
 	if (k < 0)
 	{
-			s[0] = '-';
-			k *= -1;
+		s[0] = '-';
+		k *= -1;
 	}
-	while(k > 0)
+	while (k > 0)
 	{
 		p--;
 		s[p] = ((k % 10) + 48);
@@ -63,12 +61,3 @@ char	*ft_itoa(int n)
 	}
 	return (s);
 }
-/*
-int	main(void)
-{
-	int i = -10;
-
-	while (i++ < 20)
-		printf("%s\n", ft_itoa(-2147483647 -1));
-	return 0;
-}*/

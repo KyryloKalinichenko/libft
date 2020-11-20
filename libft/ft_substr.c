@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/20 11:19:29 by kkalinic          #+#    #+#             */
+/*   Updated: 2020/11/20 13:06:52 by kkalinic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-//#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -7,28 +18,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	char	*str;
 
-	str = (char*)malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	if (s)
 	{
-		if (i >= start && j < len)
+		str = (char*)malloc(sizeof(char) * (len + 1));
+		if (!str)
+			return (NULL);
+		i = 0;
+		j = 0;
+		while (s[i])
 		{
-			str[j] = s[i];
-			j++;
+			if (i >= start && j < len)
+			{
+				str[j] = s[i];
+				j++;
+			}
+			i++;
 		}
-		i++;
+		str[j] = 0;
+		return (str);
 	}
-	str[j] = 0;
-	return (str);
+	return (NULL);
 }
-/*int	mai(void)
-{
-	char str[] = "i just want this part #############";
-        size_t size = 20;
-
-        char *ret = ft_substr(str, 5, size);
-	printf("%s\n", ret);
-}*/

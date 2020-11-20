@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 10:56:36 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/19 11:27:08 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:21:18 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstlast(t_list *lst)
 	if (lst)
 	{
 		tmp = lst;
-		while(tmp->next != NULL)
+		while (tmp->next != NULL)
 			tmp = tmp->next;
 		return (tmp);
 	}
