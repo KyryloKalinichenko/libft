@@ -6,13 +6,13 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 10:56:12 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/23 10:29:10 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/27 10:29:53 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_len(long n)
+static int		ft_len(long n)
 {
 	long k;
 	long p;
@@ -34,7 +34,7 @@ int		ft_len(long n)
 	return (k + p);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*s;
 	int		p;

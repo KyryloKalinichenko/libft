@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_iswhitespace.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 11:36:01 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/27 14:43:13 by kkalinic         ###   ########.fr       */
+/*   Created: 2020/11/20 12:23:47 by kkalinic          #+#    #+#             */
+/*   Updated: 2020/11/23 17:55:24 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *alst, void (*del)(void*))
+int		ft_iswhitespace(char c)
 {
-	if (alst != 0 && del != 0)
-	{
-		del(alst->content);
-		free (lst);
-	}
+	return (ft_isstrwhitespace(c) || ft_isotherwhitespace(c));
 }

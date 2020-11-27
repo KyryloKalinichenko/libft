@@ -6,7 +6,7 @@
 #    By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 09:54:41 by kkalinic          #+#    #+#              #
-#    Updated: 2020/11/24 14:25:22 by kkalinic         ###   ########.fr        #
+#    Updated: 2020/11/27 10:38:22 by kkalinic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -I. -c
+CFLAGS = -Wall -Werror -Wextra
 
 SRC = 	ft_memset.c \
 		ft_bzero.c \
@@ -83,13 +83,11 @@ OBJ2 = $(SRC2:.c=.o)
 
 all : $(NAME)
 
-$(NAME):
-	$(CC) $(CFLAGS) -c $(SRC)
+$(NAME): $(OBJ)
 	ar r $(NAME) $(OBJ)
 
-bonus:
-	$(CC) $(CFLAGS) -c $(SRC2)
-	ar r $(NAME) $(OBJ2)
+bonus: $(OBJ) $(OBJ2)
+	ar r $(NAME) $(OBJ) $(OBJ2)
 
 clean:
 	rm -f $(OBJ) $(OBJ2)
@@ -99,4 +97,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re all
+.PHONY: clean fclean all re

@@ -6,11 +6,12 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 12:28:52 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/23 18:20:42 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/25 14:10:03 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static int		ft_isotherwhitespace(char c)
 {
 	return (c == '\v' || c == '\f' || c == '\r');

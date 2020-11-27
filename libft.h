@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:03:17 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/23 18:23:49 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/11/25 14:06:41 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ void				ft_putendl_fd(const char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				**ft_split(char const *s, char c);
-int					ft_len(long n);
 int					ft_tolower(int c);
 
 typedef struct		s_list
