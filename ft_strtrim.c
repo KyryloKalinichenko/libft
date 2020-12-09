@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:11:12 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/23 11:45:04 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/12/09 11:54:27 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char			*ft_strtrim(char const *s, char const *set)
 	unsigned int	b;
 	char			*a;
 
-	if (!s)
+	if (!s || !set)
 		return (NULL);
 	i = 0;
 	b = (ft_strlen(s + 1));

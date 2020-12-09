@@ -6,11 +6,12 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:29:41 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/11/25 14:09:46 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/12/09 11:56:54 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static char			**ft_malloc_error(char **tab)
 {
@@ -99,6 +100,7 @@ char				**ft_split(char const *s, char c)
 	tab[i] = NULL;
 	return (tab);
 }
+
 /*
 **int	ft_count(char const *s, char c)
 **{
