@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:52:55 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/12/09 11:49:30 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/12/11 17:38:44 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list *tmp;
 
-	if (lst && (*lst != NULL))
+	if (lst && (*lst != NULL) && del)
 	{
 		while (*lst)
 		{

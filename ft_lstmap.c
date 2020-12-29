@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 13:42:51 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/12/09 11:41:20 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/12/11 17:40:04 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_elem;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	if (!(new_elem = ft_lstnew(f(lst->content))))
 	{
@@ -38,5 +38,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&new_lst, new_elem);
 	}
 	return (new_lst);
-
 }

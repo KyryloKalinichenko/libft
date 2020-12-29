@@ -6,7 +6,7 @@
 /*   By: kkalinic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:36:01 by kkalinic          #+#    #+#             */
-/*   Updated: 2020/12/09 11:49:19 by kkalinic         ###   ########.fr       */
+/*   Updated: 2020/12/11 17:27:10 by kkalinic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_lstdelone(t_list *alst, void (*del)(void*))
 	if (alst != 0 && del != 0)
 	{
 		del(alst->content);
-		free (alst);
+		free(alst);
 	}
 }
